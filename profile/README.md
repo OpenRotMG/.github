@@ -4,8 +4,8 @@
 
 <p></p>
 
-<img width="20" height="20" align="top" alt="" src="https://github.com/user-attachments/assets/a68a6186-b037-4bd1-962d-7991e37d9872" /> [Discord](https://discord.gg/EwZWNzzYwP)<br>
-<img width="20" height="20" align="top" alt="" src="https://github.com/user-attachments/assets/a68a6186-b037-4bd1-962d-7991e37d9872" /> Play Now (coming soon)
+<img width="20" height="22" align="top" alt="" src="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/item-bullet.png" /> [Discord](https://discord.gg/EwZWNzzYwP)<br>
+<img width="20" height="22" align="top" alt="" src="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/item-bullet.png" /> Play Now (coming soon)
 
 ## What is Open RotMG?
 
