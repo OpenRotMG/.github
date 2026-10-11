@@ -1,9 +1,5 @@
-# <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/fb378cc3-9969-485b-9816-8c6bdfaf7be1" /> Open RotMG <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/fb378cc3-9969-485b-9816-8c6bdfaf7be1" />
-
-<img width="20" height="22" align="top" alt="" src="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/item-bullet.png" /> [Discord](https://discord.gg/EwZWNzzYwP)<br>
-<img width="20" height="22" align="top" alt="" src="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/item-bullet.png" /> Play Now (coming soon)
-
-<img width="594" height="135" alt="image" src="https://github.com/user-attachments/assets/aa836dcf-ae14-4dc0-a14b-7b76eafb296b" />
+<!-- Slices preserve the background and give Discord its own link without custom CSS. -->
+<p><picture><source media="(max-width: 680px)" srcset="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/readme-top-mobile.png"><img width="100%" align="top" alt="Open RotMG. Recreating the 2012 realm." src="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/readme-top.png"></picture><br><a href="https://discord.gg/EwZWNzzYwP"><picture><source media="(max-width: 680px)" srcset="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/readme-discord-mobile.png"><img width="35%" align="top" alt="Discord" src="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/readme-discord.png"></picture></a><picture><source media="(max-width: 680px)" srcset="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/readme-play-mobile.png"><img width="65%" align="top" alt="Play now (coming soon)" src="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/readme-play.png"></picture><br><picture><source media="(max-width: 680px)" srcset="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/readme-bottom-mobile.png"><img width="100%" align="top" alt="" src="https://raw.githubusercontent.com/OpenRotMG/.github/main/profile/assets/readme-bottom.png"></picture></p>
 
 ## What is Open RotMG?
 
