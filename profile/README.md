@@ -17,7 +17,6 @@ The reconstruction targets build **123.5.1**.
 
 - Server source and protocol reconstruction: https://github.com/OpenRotMG/server
 - Preserved Flash client and Ruffle browser host: https://github.com/OpenRotMG/client
-- Research notes: https://github.com/OpenRotMG/research
 
 Browser startup works. The reconstruction is not playable yet.
 
