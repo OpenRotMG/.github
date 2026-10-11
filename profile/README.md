@@ -1,6 +1,6 @@
 # <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/fb378cc3-9969-485b-9816-8c6bdfaf7be1" /> Open RotMG <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/fb378cc3-9969-485b-9816-8c6bdfaf7be1" />
 
-<img width="1065" height="272" alt="image" src="https://github.com/user-attachments/assets/7a540fc1-01aa-4f85-bdca-a1a10932fe8e" />
+<img width="594" height="135" alt="image" src="https://github.com/user-attachments/assets/aa836dcf-ae14-4dc0-a14b-7b76eafb296b" />
 
 <p></p>
 
