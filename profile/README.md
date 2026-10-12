@@ -5,4 +5,6 @@
 
 Open RotMG is an authentic recreation of Realm of the Mad God as it was in 2012. No custom content, no donations, all open source. Development is from passionate players.
 
-We host a community server for people to enjoy the game and find bugs. If you want to help or are looking for new friends, come by our [Discord server](https://discord.gg/EwZWNzzYwP)!
+## Contributing
+
+If you'd like to develop Open RotMG locally, we've made it as easy as possible to get started! Clone both the [Server](https://github.com/OpenRotMG/Open-RotMG-Server) and [Client](https://github.com/OpenRotMG/Open-RotMG-Client) repos locally, and follow their READMEs to get them running. We welcome all PRs, but also join the [Discord](https://discord.gg/EwZWNzzYwP) to chat with other developers!
