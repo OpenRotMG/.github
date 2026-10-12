@@ -7,4 +7,6 @@ Open RotMG is an authentic recreation of Realm of the Mad God as it was in 2012.
 
 ## Contributing
 
-Getting started is easy! Clone https://github.com/OpenRotMG/Open-RotMG-Server and https://github.com/OpenRotMG/Open-RotMG-Client, and follow their READMEs to get them running. All PRs are welcome. Join the [Discord](https://discord.gg/EwZWNzzYwP) to chat with other developers!
+Clone https://github.com/OpenRotMG/Open-RotMG-Server, install Rust/Cargo and Python 3, then run `./run.sh`. Open the URL it prints to play your local server with our hosted client. No client clone needed.
+
+Prefer a local client? See the server README for that option. All PRs are welcome! Join https://discord.gg/EwZWNzzYwP to chat with other developers.
