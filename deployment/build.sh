@@ -10,12 +10,11 @@ case "$GITHUB_REPOSITORY" in
     cargo +1.94.1 fmt -- --check
     cargo +1.94.1 test --locked
     cargo +1.94.1 clippy --locked --all-targets -- -D warnings
-    cargo +1.94.1 build --locked
-    export OPENROTMG_BACKUP_BINARY="$PWD/target/debug/openrotmg"
+    cargo +1.94.1 build --locked --release
+    export OPENROTMG_BACKUP_BINARY="$PWD/target/release/openrotmg"
     python3 -B -W error::ResourceWarning -m unittest discover -s scripts/backups -p 'test_*.py'
     python3 -B -m unittest discover -s scripts -p test_run.py
     python3 -B -m unittest discover -s scripts/deploy -p 'test_*.py'
-    cargo +1.94.1 build --locked --release
     python3 scripts/deploy/package.py "$revision" target/release/openrotmg "$root/release"
     tar -C "$root/release" -cf "$bundle" release.json server.tar.gz
     user=openrotmg-server-deploy
