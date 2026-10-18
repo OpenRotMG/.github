@@ -1,0 +1,52 @@
+name: Deploy
+on:
+  workflow_call:
+    secrets:
+      DEPLOY_KEY:
+        required: true
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: deploy-${{ github.repository }}
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.repository_owner == 'OpenRotMG' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          path: app
+          persist-credentials: false
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: OpenRotMG/.github
+          path: pipeline
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.23.3'
+      - name: Test and build the triggering revision
+        id: build
+        run: bash pipeline/deployment/build.sh
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: deployment
+          path: deploy.bundle
+          if-no-files-found: error
+      - uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093
+        with:
+          project_id: openrotmg-20261011
+          workload_identity_provider: ${{ vars.DEPLOY_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.DEPLOY_SERVICE_ACCOUNT }}
+      - uses: google-github-actions/setup-gcloud@aa5489c8933f4cc7a4f7d45035b3b1440c9c10db
+      - name: Deploy and verify
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ vars.DEPLOY_KNOWN_HOSTS }}
+          DEPLOY_USER: ${{ steps.build.outputs.user }}
+          DEPLOY_COMMAND: ${{ steps.build.outputs.command }}
+          DEPLOY_HOST: ${{ steps.build.outputs.host }}
+        run: bash pipeline/deployment/send.sh
