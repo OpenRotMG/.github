@@ -40,7 +40,7 @@ case "$GITHUB_REPOSITORY" in
       website="$root/website"
       git clone --quiet --depth=1 --branch main https://github.com/OpenRotMG/Open-RotMG-Website.git "$website"
     fi
-    export SITE_URL=https://openrotmg.org/ CLIENT_DIR="$client"
+    export SITE_URL=https://openrotmg.org/ API_ORIGIN=https://game.openrotmg.org CLIENT_DIR="$client"
     python3 -B -m unittest discover -s "$client/tests" -v
     npm --prefix "$website" test
     python3 -B -W error::ResourceWarning -m unittest discover -s "$website/tools" -p 'test_*.py'

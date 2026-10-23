@@ -4,6 +4,8 @@ on:
     secrets:
       DEPLOY_KEY:
         required: true
+      PAGES_DEPLOY_TOKEN:
+        required: false
 permissions:
   contents: read
   id-token: write
