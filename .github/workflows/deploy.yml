@@ -63,3 +63,15 @@ jobs:
           DEPLOY_COMMAND: ${{ steps.build.outputs.command }}
           DEPLOY_HOST: ${{ steps.build.outputs.host }}
         run: bash pipeline/deployment/send.sh
+      - name: Request Pages publication
+        if: github.repository == 'OpenRotMG/Open-RotMG-Server' || github.repository == 'OpenRotMG/Open-RotMG-Client'
+        env:
+          GH_TOKEN: ${{ secrets.PAGES_DEPLOY_TOKEN }}
+        run: |
+          : "${GH_TOKEN:?PAGES_DEPLOY_TOKEN is required to publish static game assets}"
+          case "$GITHUB_REPOSITORY" in
+            OpenRotMG/Open-RotMG-Server) field=server_revision ;;
+            OpenRotMG/Open-RotMG-Client) field=client_revision ;;
+            *) exit 1 ;;
+          esac
+          gh api --method POST repos/OpenRotMG/Open-RotMG-Website/actions/workflows/deploy.yml/dispatches -f ref=main -f "inputs[$field]=$GITHUB_SHA"
